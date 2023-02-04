@@ -21,7 +21,7 @@ def beacon_flood(SSID, iface):
     print(frame)
     sendp(frame, iface=iface, verbose=False, loop=1, inter=0.1)
 
-parser = argparse.ArgumentParser(description='airodump-ng clone\n\nusage: python3 airodump-ng.py <interface>',formatter_class=RawTextHelpFormatter)
+parser = argparse.ArgumentParser(description='beacon-flood\n\nusage: python3 beacon-flood.py <interface> <ssid-list-file>',formatter_class=RawTextHelpFormatter)
 parser.add_argument('iface', help='<interface>')
 parser.add_argument('ssid_list', help='<ssid-list-file>')
 
